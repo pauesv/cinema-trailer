@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/home")
 public class HomeController {
 
     @Autowired
