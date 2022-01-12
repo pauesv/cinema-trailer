@@ -17,13 +17,13 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class HomeController {
 
     @Autowired
     private PeliculaRepository peliculaRepository;
 
-    @GetMapping("/")
+    @GetMapping("")
     ModelAndView index() {
         List<Pelicula> ultimasPeliculas = peliculaRepository
                 .findAll(PageRequest.of(0, 4, Sort.by("fechaEstreno").descending()))
