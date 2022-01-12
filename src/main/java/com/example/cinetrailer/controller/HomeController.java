@@ -23,7 +23,7 @@ public class HomeController {
     @Autowired
     private PeliculaRepository peliculaRepository;
 
-    @GetMapping("")
+    @GetMapping("/")
     ModelAndView index() {
         List<Pelicula> ultimasPeliculas = peliculaRepository
                 .findAll(PageRequest.of(0, 4, Sort.by("fechaEstreno").descending()))
