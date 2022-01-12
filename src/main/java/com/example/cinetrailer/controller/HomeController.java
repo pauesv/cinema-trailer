@@ -33,7 +33,7 @@ public class HomeController {
                 .addObject("ultimasPeliculas", ultimasPeliculas);
     }
 
-    @GetMapping("/peliculas")
+    @GetMapping("/index/peliculas")
     ModelAndView listaPeliculas( @PageableDefault(sort = "fechaEstreno", direction = Sort.Direction.DESC)
                                          Pageable pageable) {
         Page<Pelicula> peliculas = peliculaRepository.findAll(pageable);
@@ -41,7 +41,7 @@ public class HomeController {
                 .addObject("peliculas", peliculas);
     }
 
-    @GetMapping("/peliculas/{id}")
+    @GetMapping("/index/peliculas/{id}")
     ModelAndView detallesPelicula(@PathVariable Integer id) {
         Pelicula pelicula = peliculaRepository.getOne(id);
         return new ModelAndView("pelicula")
