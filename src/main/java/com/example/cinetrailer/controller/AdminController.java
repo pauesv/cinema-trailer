@@ -23,7 +23,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 
 @Controller
-@RequestMapping("/admin/index/admin")
+@RequestMapping("/index/admin")
 public class AdminController {
 
 
